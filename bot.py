@@ -34,7 +34,7 @@ def run_discord_bot():
             await server.edit(icon=icon)
             
             # Get the channel id and post the new image in the channel
-            channel = client.get_channel(1163169073866211421)
+            channel = client.get_channel() #Put your desired channel id here, where you would want the bot to post the image it has changed to. To get the channel id make sure you have dev mode on in the discord settings. 
             with open(random_image, 'rb') as f:
                 picture = discord.File(f)
                 await channel.send('Uus kass on: ', file=picture)
